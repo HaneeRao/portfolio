@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanee Rao - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #3B82F6, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card-hover {
+            transition: transform 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+        }
+        .nav-link {
+        position: relative;
+        padding-bottom: 4px;
+    }
+    
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(45deg, #3B82F6, #8B5CF6);
+        transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+        width: 100%;
+    }
+    
+    .nav-arrow {
+        display: inline-block;
+        opacity: 0;
+        transform: translateX(-8px);
+        transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover .nav-arrow {
+        opacity: 1;
+        transform: translateX(4px);
+    }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white/80 backdrop-blur-md shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <img src="./wp-content/wp-images/my logo.jpg" alt="logo" class="w-10 h-12"></a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 transition flex items-center">
+                        Home
+                        <span class="nav-arrow">
+                            <i class="fas fa-arrow-right text-sm ml-1"></i>
+                        </span>
+                    </a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 transition flex items-center">
+                        About
+                        <span class="nav-arrow">
+                            <i class="fas fa-arrow-right text-sm ml-1"></i>
+                        </span>
+                    </a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-blue-600 transition flex items-center">
+                        Projects
+                        <span class="nav-arrow">
+                            <i class="fas fa-arrow-right text-sm ml-1"></i>
+                        </span>
+                    </a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 transition flex items-center">
+                        Contact
+                        <span class="nav-arrow">
+                            <i class="fas fa-arrow-right text-sm ml-1"></i>
+                        </span>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button (optional) -->
+                <button class="md:hidden text-gray-700 hover:text-blue-600 transition">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (optional) -->
+        <div class="md:hidden hidden">
+            <div class="px-4 py-3 space-y-3">
+                <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 transition block">
+                    Home
+                    <span class="nav-arrow float-right">
+                        <i class="fas fa-arrow-right text-sm"></i>
+                    </span>
+                </a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 transition block">
+                    About
+                    <span class="nav-arrow float-right">
+                        <i class="fas fa-arrow-right text-sm"></i>
+                    </span>
+                </a>
+                <a href="#projects" class="nav-link text-gray-700 hover:text-blue-600 transition block">
+                    Projects
+                    <span class="nav-arrow float-right">
+                        <i class="fas fa-arrow-right text-sm"></i>
+                    </span>
+                </a>
+                <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 transition block">
+                    Contact
+                    <span class="nav-arrow float-right">
+                        <i class="fas fa-arrow-right text-sm"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-28 md:pt-36 pb-20 bg-gradient-to-b from-blue-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 animate-fade-in">
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                        <span class="gradient-text">Hi, I'm</span>
+                        <br>Hanee Rao
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">A passionate full-stack developer crafting beautiful and functional digital experiences</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="gradient-bg text-white px-8 py-4 rounded-full hover:shadow-lg transition">Get in Touch</a>
+                        <a href="#projects" class="bg-white text-gray-800 px-8 py-4 rounded-full hover:shadow-lg transition border">View Work</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-12 md:mt-0 animate-fade-in" style="animation-delay: 0.2s;">
+                    <div class="relative">
+                        <div class="absolute inset-0 gradient-bg rounded-full blur-2xl opacity-20"></div>
+                        <img src="./wp-content/wp-images/my image2.jpg" alt="Profile" class="rounded-full w-72 h-72 mx-auto object-cover border-8 border-white shadow-xl relative">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                <span class="gradient-text">About Me</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-code text-3xl gradient-text"></i>
+                        <h3 class="text-2xl font-semibold ml-4">My Journey</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">I started my tech journey with C programming, gaining a solid foundation in algorithms and data structures. I then completed the CCNA course, enhancing my knowledge of networking fundamentals. After exploring cloud computing, I deepened my understanding of cloud infrastructure and services. Now, I'm focusing on IT automation, aiming to optimize workflows through scripting and tools like Terraform, Ansible, and CI/CD pipelines.</p>
+                </div>
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-laptop-code text-3xl gradient-text"></i>
+                        <h3 class="text-2xl font-semibold ml-4">Skills</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-4 rounded-xl shadow-sm hover:shadow-md transition">
+                            <i class="fab fa-html5 text-blue-500 mr-2"></i> HTML5 & CSS3
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-xl shadow-sm hover:shadow-md transition">
+                            <i class="fab fa-js text-blue-500 mr-2"></i> Python
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-xl shadow-sm hover:shadow-md transition">
+                            <i class="fab fa-react text-blue-500 mr-2"></i> CCNA
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                <span class="gradient-text">Featured Projects</span>
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
+                    <div class="relative">
+                        <img src="./wp-content/wp-images/pro-image1.jpg" alt="Project 1" class="w-full h-56 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-3">Password Generator</h3>
+                        <p class="text-gray-600 mb-6">I created a Python-based password generator that generates strong, customizable passwords with options for length, uppercase, lowercase, numbers, and special characters. This project enhanced my skills in Python, randomization, and user input handling.
+
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 flex items-center">
+                                <span>View Live</span>
+                                <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800 flex items-center">
+                                <span>Code</span>
+                                <i class="fab fa-github ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                 <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
+                    <div class="relative">
+                        <img src="./wp-content/wp-images/pro2-image.jpg" alt="Project 2" class="w-full h-56 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-3">Voice Assistant for Music</h3>
+                        <p class="text-gray-600 mb-6">The Voice Assistant for Music is a Python-based application that enables users to control music playback on YouTube using voice commands. It allows users to play, pause, skip, or search for specific songs directly on YouTube, making it easy to enjoy hands-free music. Utilizing libraries like SpeechRecognition and webbrowser, the assistant enhances the user experience by providing seamless music control through voice, making it a convenient tool for music lovers. Perfect for those who want quick access to YouTube's vast music library with just a voice command.
+
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 flex items-center">
+                                <span>View Live</span>
+                                <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800 flex items-center">
+                                <span>Code</span>
+                                <i class="fab fa-github ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                <span class="gradient-text">Contact Me</span>
+            </h2>
+            <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg p-8">
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2 font-medium">Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-blue-500 transition">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2 font-medium">Email</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-blue-500 transition">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2 font-medium">Message</label>
+                        <textarea class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-blue-500 transition" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="w-full gradient-bg text-white px-8 py-4 rounded-xl hover:shadow-lg transition">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-2xl font-bold mb-4 md:mb-0">Hanee Rao</div>
+                <div class="flex space-x-8">
+                    <a href="#" class="hover:text-gray-200 transition"><i class="fab fa-linkedin text-2xl"></i></a>
+                    <a href="#" class="hover:text-gray-200 transition"><i class="fab fa-github text-2xl"></i></a>
+                    <a href="#" class="hover:text-gray-200 transition"><i class="fab fa-instagram text-2xl"></i></a>
+                    <a href="#" class="hover:text-gray-200 transition"><i class="fab fa-dribbble text-2xl"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-white/20 mt-8 pt-8 text-center">
+                <p>© 2024 Hanee Rao. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
